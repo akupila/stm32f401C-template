@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<ProjectWorkspace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="project_mpw.xsd">
+
+  <SchemaVersion>1.0</SchemaVersion>
+
+  <Header>### uVision Project, (C) Keil Software</Header>
+
+  <WorkspaceName>WorkSpace</WorkspaceName>
+
+  <project>
+    <PathAndName>..\..\Demonstration\MDK-ARM\STM32F401-Discovery_Demo.uvproj</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
+  </project>
+
+  <project>
+    <PathAndName>..\..\FW_upgrade\MDK-ARM\STM32F401-Discovery_FW_Upgrade.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\ADC_DMA\MDK-ARM\ADC_DMA.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\DMA_FLASHToRAM\MDK-ARM\DMA_FLASHToRAM.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\EXTI_Example\MDK-ARM\EXTI_Example.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\FLASH_Program\MDK-ARM\Flash_Program.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\FLASH_WriteProtection\MDK-ARM\Flash_Write_Protection.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\GPIO_IOToggle\MDK-ARM\GPIO_IOToggle.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\IWDG_Example\MDK-ARM\IWDG_Example.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\MEMS_L3GD20\MDK-ARM\L3GD20.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\PWR_CurrentConsumption\MDK-ARM\PWR_CurrentConsumption.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\PWR_STANDBY\MDK-ARM\PWR_STANDBY.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\PWR_STOP\MDK-ARM\PWR_STOP.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\RCC_Example\MDK-ARM\RCC_Example.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\SysTick_Example\MDK-ARM\SysTick_Example.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\TIM_ComplementarySignals\MDK-ARM\TIM_ComplementarySignals.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\TIM_PWM_Input\MDK-ARM\TIM_PWM_Input.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\TIM_PWM_Output\MDK-ARM\TIM_PWM_Output.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Peripheral_Examples\TIM_TimeBase\MDK-ARM\TIM_TimeBase.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\..\Template\MDK-ARM\Template.uvproj</PathAndName>
+  </project>
+
+</ProjectWorkspace>

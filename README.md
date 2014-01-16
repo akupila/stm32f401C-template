@@ -1,11 +1,11 @@
-stm32f401C-template
+STM32f401C-template
 ===================
 
 Template for starting out with STM32F401C-Disco
 
 ---
 
-This is just a quick template for getting started aimed at working more or less out of the box
+This is just a quick template for getting started aimed at working more or less out of the box. This is far from complete though but it was quite annoying for me to set up so hopefully this helps somebody else.. :)
 
 ---
 

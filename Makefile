@@ -58,6 +58,7 @@ CFLAGS += -I inc
 CFLAGS += -I src
 CFLAGS += -I $(CMSIS)/Include
 CFLAGS += -I $(CMSIS)/Device/ST/STM32F4xx/Include
+CFLAGS += -I $(ST_FIRMWARE)
 CFLAGS += -I $(ST_FIRMWARE)/Libraries/stm32f4xx_StdPeriph_Driver/inc
 CFLAGS += -I $(ST_FIRMWARE)/Utilities/STM32F401-Discovery
 # CFLAGS += -I $(ST_FIRMWARE)/Libraries/STM32_USB_Device_Library/Core/inc
@@ -70,8 +71,7 @@ CFLAGS += -I $(ST_FIRMWARE)/Utilities/STM32F401-Discovery
 #CFLAGS += -I $(STD_PERIPH_LIB)/Libraries/STM32F4xx_StdPeriph_Driver/inc
 #CFLAGS += -I $(STD_PERIPH_LIB)/Projects/Demonstration/stm32f4xx_conf.h
 
-# need if you want to build with -DUSE_CMSIS 
-#SRCS += stm32f0_discovery.c
+# SRCS += $(ST_FIRMWARE)/Utilities/STM32F401-Discovery/stm32f401_discovery.c
 #SRCS += stm32f0_discovery.c stm32f0xx_it.c
 
 OBJS = $(addprefix $(BUILD_DIR)/objs/,$(SRCS:.c=.o))
@@ -106,7 +106,7 @@ $(BUILD_DIR)/$(PROJ_NAME).elf: $(OBJS)
 
 program: all
 	@sleep 1
-	st-flash write `pwd`/$(PROJ_NAME).bin 0x08000000
+	st-flash write `pwd`/$(BUILD_DIR)/$(PROJ_NAME).bin 0x08000000
 
 debug: program
 	$(GDB) -x extra/gdb_cmds $(PROJ_NAME).elf

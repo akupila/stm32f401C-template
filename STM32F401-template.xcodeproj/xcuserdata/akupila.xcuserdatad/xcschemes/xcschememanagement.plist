@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>code-sense-hack.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>00D18AF71888503400B45FE7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>00D1A26718892B9D00B45FE7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -13,9 +13,9 @@
 
 int main()
 {
-    while (1)
-    {   
-    }
-    
-    return 0;
+	while (1)
+	{
+	}
+
+	return 0;
 }

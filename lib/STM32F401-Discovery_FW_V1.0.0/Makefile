@@ -53,5 +53,6 @@ libstm32f4.a: $(OBJS)
 	$(AR) -r $@ $(OBJS)
 
 clean:
-	rm -f $(OBJS) $(BUILD_DIR) libstm32f4.a
+	rm -f $(OBJS) libstm32f4.a
+	rm -rf $(BUILD_DIR)
 

@@ -1,6 +1,8 @@
 CC=arm-none-eabi-gcc
 AR=arm-none-eabi-ar
 
+# Build artifact location
+BUILD_DIR=build
 ###########################################
 
 vpath %.c Libraries/STM32F4xx_StdPeriph_Driver/src
@@ -11,8 +13,8 @@ CFLAGS += -mfpu=fpv4-sp-d16 -mfloat-abi=hard
 CFLAGS += -ffreestanding -nostdlib
 CFLAGS += -include stm32f4xx_conf.h 
 CFLAGS += -I Libraries/CMSIS/Include 
-CFLAGS += -I Libraries/CMSIS/Device/ST/stm32f4xx/Include 
-CFLAGS += -I Libraries/stm32f4xx_StdPeriph_Driver/inc
+CFLAGS += -I Libraries/CMSIS/Device/ST/STM32F4xx/Include 
+CFLAGS += -I Libraries/STM32F4xx_StdPeriph_Driver/inc
 CFLAGS += -I Libraries/STM32_USB_Device_Library/Core/inc
 CFLAGS += -I Libraries/STM32_USB_Device_Library/Class/audio/inc
 CFLAGS += -I Libraries/STM32_USB_Device_Library/Class/cdc/inc
@@ -31,8 +33,8 @@ SRCS = stm32f4xx_adc.c stm32f4xx_can.c \
        stm32f4xx_wwdg.c \
        system_stm32f4xx.c
 
-OBJS = $(addprefix objs/,$(SRCS:.c=.o))
-DEPS = $(addprefix deps/,$(SRCS:.c=.d))
+OBJS = $(addprefix $(BUILD_DIR)/objs/,$(SRCS:.c=.o))
+DEPS = $(addprefix $(BUILD_DIR)/deps/,$(SRCS:.c=.d))
 
 .PHONY: all clean
 
@@ -40,16 +42,16 @@ all: libstm32f4.a
 
 -include $(DEPS)
 
-dirs:
-	mkdir -p deps objs
-	touch dirs
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
+	mkdir -p $(BUILD_DIR)/deps $(BUILD_DIR)/objs
 
-objs/%.o : %.c dirs
-	$(CC) $(CFLAGS) -c -o $@ $< -MMD -MF deps/$(*F).d
+$(BUILD_DIR)/objs/%.o : %.c $(BUILD_DIR)
+	$(CC) $(CFLAGS) -c -o $@ $< -MMD -MF $(BUILD_DIR)/deps/$(*F).d
 
 libstm32f4.a: $(OBJS)
 	$(AR) -r $@ $(OBJS)
 
 clean:
-	rm -f dirs $(OBJS) $(DEPS) libstm32f4.a
+	rm -f $(OBJS) $(BUILD_DIR) libstm32f4.a
 
